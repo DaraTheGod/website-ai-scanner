@@ -32,7 +32,7 @@ function App() {
     setResult(null);
 
     try {
-      const res = await axios.post("https://python-backend-production-e2f5.up.railway.app/scan", { url });
+      const res = await axios.post("http://localhost:8000/scan", { url });
       setResult(res.data);
     } catch (err) {
       setError("Failed to scan the website. Please check the URL and try again.");
@@ -62,7 +62,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen p-10 w-full flex flex-col items-center justify-center relative overflow-hidden bg-background text-foreground antialiased selection:bg-primary/20">
+    <div className="min-h-screen p-5 w-full flex flex-col items-center justify-center relative overflow-hidden bg-background text-foreground antialiased selection:bg-primary/20">
       {/* Background Gradients */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-500/10 rounded-full blur-[120px]" />
