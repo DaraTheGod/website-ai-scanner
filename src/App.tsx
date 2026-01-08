@@ -32,7 +32,7 @@ function App() {
     setResult(null);
 
     try {
-      const res = await axios.post("http://localhost:8000/scan", { url });
+      const res = await axios.post("https://python-backend-production-e2f5.up.railway.app/scan", { url });
       setResult(res.data);
     } catch (err) {
       setError("Failed to scan the website. Please check the URL and try again.");
